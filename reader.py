@@ -19,7 +19,8 @@ def main():
         {'drone_id': 'drone_F', 'local_static_ip': '10.223.0.106', 'receive_port': '5011'},
         {'drone_id': 'drone_G', 'local_static_ip': '10.223.0.107', 'receive_port': '5012'},
         {'drone_id': 'drone_Ghadron', 'local_static_ip': '10.223.0.110', 'receive_port': '5020'},
-        {'drone_id': 'drone_Sightline', 'local_static_ip': '10.223.0.111', 'receive_port': '5021'}
+        {'drone_id': 'drone_Sightline', 'local_static_ip': '10.223.0.111', 'receive_port': '5021'},
+        {'drone_id': 'ground_Station', 'local_static_ip': '10.223.0.100', 'receive_port': '5005'},
     ]
 
     # Create the udp socket
