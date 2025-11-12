@@ -2,6 +2,7 @@ from pyubx2 import UBXReader
 import serial.tools.list_ports
 import socket
 import json
+import time
 
 def main():
     ports = serial.tools.list_ports.comports()
@@ -53,6 +54,8 @@ def main():
                             udp_socket.sendto(json_data, (drone['local_static_ip'], int(drone['receive_port'])))
                         except Exception as e:
                             print(f"Error sending to {drone['drone_id']} at {drone['local_static_ip']}:{drone['receive_port']}: {e}")
+                    # Sleep briefly to avoid overwhelming the network (1 second)
+                    time.sleep(1)
     except KeyboardInterrupt:
         print("Exiting...")
     finally:
